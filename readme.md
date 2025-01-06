@@ -36,35 +36,39 @@ Deliverables:
 a. 1 application load balancer (ALB) that listens on TCP port 80 (HTTP) and forwards traffic to the ASG in subnets
 sub3 and sub4 on port 443
 
-![My-App-Apache-Redhat-Screenshot](https://github.com/user-attachments/assets/3ed4065c-53c5-49fc-9047-714f06430771)
+![My-App-Apache-Redhat-Screenshot](https://github.com/user-attachments/assets/b809edcd-9622-4236-afb3-10e16016f366)
+
 
 
 
 b. Login to the stand-alone EC2 instance in sub2 and take a screenshot of the terminal while logged in. Include
 this screenshot in your documentation.
 
+![terminal-ss](https://github.com/user-attachments/assets/cbed84dd-5554-4a93-b74b-52b49764115c)
 
-![terminal-ss](https://github.com/user-attachments/assets/7264b14e-a8d4-4248-b622-5053001f1414)
+
 
 c. An architecture diagram
 
+![AWS-VPC-Diagram-final](https://github.com/user-attachments/assets/30dee58a-f6ba-4132-b49f-bf40015504b7)
 
-![AWS-VPC-Diagram-final](https://github.com/user-attachments/assets/4c681ebb-68e3-4d27-b287-1a077b7c18e9)
 
 
 File Tree
 
-![files](https://github.com/user-attachments/assets/1f99520d-45d9-4b4d-95b6-8e91b2bffea2)
+![files](https://github.com/user-attachments/assets/460c0e6f-e384-4d88-b3c3-779d06fe7792)
+
 
 
 0-Auth.tf
 
-![0-Auth](https://github.com/user-attachments/assets/14a4cd43-4e0c-40ad-a3fd-ab05182616e0)
+![0-Auth](https://github.com/user-attachments/assets/b101d153-d7c4-4b9d-acef-bd4a56169793)
 
 
 1-VPC-EC2
 
-![1-VPC-EC2](https://github.com/user-attachments/assets/5e1e0f0b-df26-46c5-9caa-3f30bf8e7084)
+![1-VPC-EC2](https://github.com/user-attachments/assets/e45818d9-7cd1-478d-819c-bb0989606a0b)
+
 
 SSH into EC2
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html
@@ -75,44 +79,50 @@ What I didn't know is that the Linux Redhat AMI isn't compaible with AWS Direct 
 
 2-Subnets
 
-![2-Subnet_1](https://github.com/user-attachments/assets/b00c7fd5-8c32-4eea-950a-1245bdca249c)
+![2-Subnet_1](https://github.com/user-attachments/assets/f93cc2c3-dc8e-4503-b3bc-6e081d72b3aa)
 
-![2-Subnets_2](https://github.com/user-attachments/assets/6d2fae59-fd2f-4c00-8981-9aab770686c2)
+![2-Subnets_2](https://github.com/user-attachments/assets/a141296b-d9f6-4793-88ee-78a2358d16da)
+
 
 3-IGW
 
-![3-IGW](https://github.com/user-attachments/assets/598d900b-ae43-48c0-9beb-9beffb72a28b)
+![3-IGW](https://github.com/user-attachments/assets/9d292279-4e0f-4be6-83ae-201438b02913)
+
 
 
 4-EIP_NAT GW
 
-![4-EIP_NAT](https://github.com/user-attachments/assets/3f2bbdc7-f7b8-4050-98cc-81d261a338ed)
+![4-EIP_NAT](https://github.com/user-attachments/assets/50f8ecaa-c1a1-4e6f-aa79-c60196f37df1)
+
+
 
 5- Route Tables
+![5-Route_1](https://github.com/user-attachments/assets/4bb7e96b-3c2f-4f3a-b41b-fe4c7a1e682f)
 
-![5-Route_1](https://github.com/user-attachments/assets/2a073c02-10a1-49f1-9328-e54c889e6d45)
+![5-Route_2](https://github.com/user-attachments/assets/231ce667-a9d2-47a5-85ea-1b214a88d842)
 
-
-![5-Route_2](https://github.com/user-attachments/assets/a43dcc60-5d28-40ac-819e-9fec1fa242f1)
 
 6-All-SG
 
-![6-All-SG_1](https://github.com/user-attachments/assets/e60cffa0-0040-4f4f-a297-6d635147a612)
+![6-All-SG_1](https://github.com/user-attachments/assets/82ebb83f-d4ca-47a6-b35f-e9384160ae46)
 
-![6-All-SG_2](https://github.com/user-attachments/assets/66a19b7c-ef23-4ee5-9f0a-19ecc686d53c)
+![6-All-SG_2](https://github.com/user-attachments/assets/fca0e419-2623-4302-a2f2-97a00f08e134)
 
 
 7 - Launch Template
 
-![7-launchtemplate](https://github.com/user-attachments/assets/cdb35b8e-9ea4-426b-b966-4a1299133b78)
+![7-launchtemplate](https://github.com/user-attachments/assets/25187d81-87b3-44c2-8193-2c973015d93a)
+
 
 8 - Target Group
 
-![8-target-group](https://github.com/user-attachments/assets/b11ee3cd-4e88-4d80-9e26-33181bf53793)
+![8-target-group](https://github.com/user-attachments/assets/373f6221-7d3b-402c-ba81-0690e30f4b7e)
+
 
 9 - Load Balancer
 
-![9-LoadBalancer](https://github.com/user-attachments/assets/14172e93-0f56-4053-9989-4773f2c70ec8)
+![9-LoadBalancer](https://github.com/user-attachments/assets/d733cb3c-09ea-465a-bc39-ae935479d74d)
+
 
 10- ASG
 I decided to add a name_prefix arguement with a variable to easily re-name a standard "company asg".
@@ -124,9 +134,10 @@ time to scale out, adding resilency, while being cost-effective.
 Describes a scaling metric for a predictive scaling policy. 
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_policy#argument-reference
 
-![10-ASG_1](https://github.com/user-attachments/assets/bcbea23c-fbe3-4dc9-b952-1a19c1792d15)
+![10-ASG_1](https://github.com/user-attachments/assets/24329db7-9212-462c-9bb8-fd65753760f4)
 
-![10-ASG_2](https://github.com/user-attachments/assets/dc06fe56-4742-40db-b689-c1e012dd19a9)
+![10-ASG_2](https://github.com/user-attachments/assets/6c97455b-68be-43fe-a856-e4c414271851)
+
 
 11- S3
 S3 bucket_suffix
@@ -137,16 +148,18 @@ to ensure I could generate a unique bucket name. This should work as a POF for a
 Terrraform registry - AWS bucket lifecycle configuration
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/how-to-set-lifecycle-configuration-intro.html
 
-![11-S3_1](https://github.com/user-attachments/assets/33560396-8292-4b96-a2fa-79cebb1fa09a)
 
-![11-S3_2](https://github.com/user-attachments/assets/03447656-ed75-4497-88c6-d24cecef01ca)
+![11-S3_1](https://github.com/user-attachments/assets/e7bdc7a7-4cc1-466d-93ef-e6ecbd92f37d)
 
-![11-S3_3](https://github.com/user-attachments/assets/a7508906-c219-49c9-a7cf-ae9e7d96dff9)
+![11-S3_2](https://github.com/user-attachments/assets/840ae4f0-f1d1-43c9-b756-1a51fee0ed3e)
+
+![11-S3_3](https://github.com/user-attachments/assets/1c93d734-1a13-4549-9f29-177829688076)
 
 
 12- Outputs
 
-![12-outputs](https://github.com/user-attachments/assets/8da540b4-4b9e-45fa-b761-30f4fade2785)
+![12-outputs](https://github.com/user-attachments/assets/e403875e-17c7-4e31-8409-e61b87416f00)
+
 
 
 13. TF Vars
@@ -154,15 +167,17 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/how-to-set-lifecycle-confi
 Change necessary here; TFvars file assigns values to the variable listed in variable.
 
 
-![13-tfvars_1](https://github.com/user-attachments/assets/9ee9b6b9-ddb9-467f-8cd2-58342ae25e6c)
+![13-tfvars_1](https://github.com/user-attachments/assets/f75cdc71-6e0f-4cfe-a424-7293a0ccd869)
 
-![13-tfvars_2](https://github.com/user-attachments/assets/70578157-ee90-4ddc-809b-88ca9b9806cc)
+![13-tfvars_2](https://github.com/user-attachments/assets/809c488b-e43e-4771-a5aa-9c5fade6ad56)
 
 
 14. Variables
+15. 
+![14-variable_1](https://github.com/user-attachments/assets/bb56245a-0b79-467f-a8a2-620f1ca22e2a)
 
-![14-variable_1](https://github.com/user-attachments/assets/129ba61a-27e8-4f12-89fc-51007fa4db52)
+![14-variable_2](https://github.com/user-attachments/assets/82cd60be-ccdd-4db4-948c-9787e90582a2)
 
-![14-variable_2](https://github.com/user-attachments/assets/d271bf91-a779-47a6-8a07-898d0d2854e9)
 
-![14-variable_3](https://github.com/user-attachments/assets/ddc5acf4-25f1-44ad-beca-59adfcf4b639)
+![14-variable_3](https://github.com/user-attachments/assets/13615f17-9239-4774-b980-da640aa66800)
+
