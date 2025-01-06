@@ -97,6 +97,7 @@ What I didn't know is that the Linux Redhat AMI isn't compaible with AWS Direct 
 
 
 5- Route Tables
+
 ![5-Route_1](https://github.com/user-attachments/assets/4bb7e96b-3c2f-4f3a-b41b-fe4c7a1e682f)
 
 ![5-Route_2](https://github.com/user-attachments/assets/231ce667-a9d2-47a5-85ea-1b214a88d842)
@@ -173,7 +174,7 @@ Change necessary here; TFvars file assigns values to the variable listed in vari
 
 
 14. Variables
-15. 
+
 ![14-variable_1](https://github.com/user-attachments/assets/bb56245a-0b79-467f-a8a2-620f1ca22e2a)
 
 ![14-variable_2](https://github.com/user-attachments/assets/82cd60be-ccdd-4db4-948c-9787e90582a2)
