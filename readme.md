@@ -39,6 +39,7 @@ sub3 and sub4 on port 443
 ![My-App-Apache-Redhat-Screenshot](https://github.com/user-attachments/assets/b809edcd-9622-4236-afb3-10e16016f366)
 
 Redhat Research
+https://access.redhat.com/solutions/15356#us_west_1_rhel9
 https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/deploying_rhel_8_on_amazon_web_services/creating-and-uploading-aws-ami-images_cloud-content-aws#creating-and-uploading-aws-ami-images_cloud-content-AWS
 - Quick over view of steps; including IAM role and trust-policy.json
 
