@@ -14,7 +14,7 @@ Overall it was pretty straightforward, the instructions didn't call for modules,
 I pulled my code from the Terraform registry; or from my previous repos and Frankenstein-ed it together. 
 I used generic variables for most of the resources, and took that approach after studying the Coalfire Repo. 
 
-Visuals of the .tf files in my configuaration follow. 
+Visuals of the .tf files in my configuration follow. 
 
 Requirements:
 
@@ -83,7 +83,7 @@ SSH into EC2
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html
 
 The SSH connection gave me the most trouble. I understand port 22 must be open in the security group. 
-What I didn't know is that the Linux Redhat AMI isn't compaible with AWS Direct Connect, so I used SSH client and powershell (GCP is better here in my opinion). 
+What I didn't know is that the Linux Redhat AMI isn't compatible with AWS Direct Connect, so I used SSH client and Powershell. 
 
 
 2-Subnets
@@ -142,6 +142,7 @@ target_tracking_configuration - A requirement I looked up. I decided to use "ASG
 time to scale out, adding resilency, while being cost-effective.  
 
 Describes a scaling metric for a predictive scaling policy. 
+
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_policy#argument-reference
 
 ![10-ASG_1](https://github.com/user-attachments/assets/24329db7-9212-462c-9bb8-fd65753760f4)
@@ -152,8 +153,8 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/auto
 11- S3
 S3 bucket_suffix
 
-Because bucket names need to be globally unique, and I'm quite sure "Logs" and "Images" were snapped up many moons ago, I added randomizer string as a suffix;
-to ensure I could generate a unique bucket name. This should work as a POF for a client. 
+Because bucket names need to be globally unique, and I'm quite sure "Logs" and "Images" were snapped up many moons ago.
+I added randomizer string as a suffix; to ensure I could generate a unique bucket name. This should work as a proof of concept for a client. 
 
 Terrraform registry - AWS bucket lifecycle configuration
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/how-to-set-lifecycle-configuration-intro.html
@@ -174,7 +175,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/how-to-set-lifecycle-confi
 
 13. TF Vars
 
-Change necessary here; TFvars file assigns values to the variable listed in variable.
+Change necessary values here; TFvars file assigns values to the variable listed in variable.
 
 
 ![13-tfvars_1](https://github.com/user-attachments/assets/f75cdc71-6e0f-4cfe-a424-7293a0ccd869)
