@@ -1,0 +1,96 @@
+AWS TECHNICAL CHALLENGE - COALFIRE
+(due 1-6-24)
+Hello! This project serves as a proof on concept for a VPC
+
+0- Auth
+
+
+1-VPC / EC2
+SSH into
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html
+
+The SSH connection gave me the most trouble. I understand port 22 must be open in the security group. 
+What I didn't know is that the Linux Redhat AMI isn't compaible with AWS Direct Connect, so I used SSH client and powershell (GCP is better here in my opinion). 
+
+
+SSH Iam Permissions
+Found at terraform registry
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#iam_instance_profile-1
+
+2-Subnets
+
+
+
+3-IGW
+Found at terraform registry
+
+
+
+4- EIP_Nat GW
+
+
+
+
+5- Route Table
+
+
+
+
+6- All Security Groups
+
+
+
+7-Lanch Template
+
+
+
+8 - Target Groups
+
+
+
+
+9- Load Balancer
+
+10- ASG >> 
+I decided to add a name_prefix arguement with a variable to easily re-name a standard "company asg".
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_group#argument-reference
+
+Line 39, target_tracking_configuration - A required I looked up. I decided to use "ASGAverageCPUUtilization" at a target value of 75%. Which gives My_App enough
+time to scaled out, adding resilency, while being cost-effective.  
+
+Describes a scaling metric for a predictive scaling policy. 
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_policy#argument-reference
+
+
+11- S3 bucket_suffix
+Because bucket names need to be globally unique, and I'm quite sure "Logs" and "Images" were snapped up many moons ago, I added randomizer string as a suffix
+to ensure I could generate a unique bucket name. This should work as a POF for the client. 
+
+
+
+12- outputs
+
+#Change values in TFVars file
+#TFvars file assigns values to the variable listed in variable.TFvars
+
+
+
+
+
+
+Terrraform registry >>
+- AWS bucket lifecycle configuration
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/how-to-set-lifecycle-configuration-intro.html
+
+- aws_lb_target_group
+
+
+Redhat Research
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/deploying_rhel_8_on_amazon_web_services/creating-and-uploading-aws-ami-images_cloud-content-aws#creating-and-uploading-aws-ami-images_cloud-content-AWS
+- Quick over view of steps; including IAM role and trust-policy.json
+
+
+
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/deploying_rhel_8_on_amazon_web_services/assembly_deploying-a-virtual-machine-on-aws_cloud-content-aws#aws-image-options_deploying-a-virtual-machine-on-aws
+
+https://developer.hashicorp.com/terraform/tutorials/configuration-language/outputs
